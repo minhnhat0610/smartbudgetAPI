@@ -1,0 +1,30 @@
+GET http://localhost:5000/api/balance/
+
+### 
+POST http://localhost:5000/api/balance/
+Content-Type: application/json
+
+{
+    "total-balance": 3500,
+    "ledger-balance": 5000,
+    "close-date": "11/28/2022",
+    "last-daily-threshold": "67.31",
+    "end-date": "1/20/2023"
+}
+
+###
+POST http://localhost:5000/api/transactions/
+Content-Type: application/json
+
+{
+    "transaction-date": "11/15/2022",
+    "data": []
+}
+
+###
+POST http://localhost:5000/api/transactions/12%5C5%5C2022_0
+
+
+
+
+
