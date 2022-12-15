@@ -91,6 +91,7 @@ const UpdateTransactionDetails = (dateIndex, transactionIndex, changes) => {
             transaction[key] = changes[key]
         }
     }
+    
 
     return transaction
 }
@@ -150,9 +151,9 @@ router.route("/:transactionID")
             const originalDate = transactionID.substring(0,splitterIndex)
             target["transaction-date"] = originalDate
             console.log("====Locating transaction...====")
-            const dateIndex = FindTransactionbyDate(transactionArr, target)
+            let dateIndex = FindTransactionbyDate(transactionArr, target)
             if(dateIndex >=0){
-                const transactionIndex = FindTransactionbyID(transactionArr,target,dateIndex)
+                let transactionIndex = FindTransactionbyID(transactionArr,target,dateIndex)
                 console.log("====Found transactions====")
                 try{
                     if(transactionIndex >= 0){
@@ -175,15 +176,22 @@ router.route("/:transactionID")
                         //Update new position in transaction array if transaction date has change
                         if(changes["transaction-date"]){
                             console.log("====Start update transaction DATE====")
-
+                            const shadowCopy = {...updatedTransaction}
                             const newTransaction = {
-                                "data": [updatedTransaction],
+                                "data": [shadowCopy],
                                 "transaction-date": changes["transaction-date"]
                             }
 
                             const newPosition = FindTransactionbyDate(transactionArr, newTransaction)
                             CreateNewTransactionID(newPosition,newTransaction)
                             AddTransaction(newPosition,newTransaction)
+
+                            // Remove the original transaction
+                            dateIndex = FindTransactionbyDate(transactionArr, target)
+                            console.log(dateIndex)
+
+                            transactionIndex = FindTransactionbyID(transactionArr,target, dateIndex)
+                            console.log(transactionIndex)
                             RemoveTransaction(dateIndex, transactionIndex)
                             console.log("====Complete update transaction DATE====")
 
@@ -195,10 +203,15 @@ router.route("/:transactionID")
                     
                 }
                 catch(err){
-                    transactionIndex < 0 ?
-                    res.status(404).send("Could not locate transaction by transactionID")
-                    :
-                    res.status(503).send("Internal Sever Error!")
+                    console.log(err)
+                    if(transactionIndex < 0){
+                        return res.status(404).send("Could not locate transaction by transactionID")
+
+                    }
+                    else{
+                        return res.status(503).send("Internal Sever Error!")
+
+                    }
                 }
                 finally{
                     // Write transactions to file
@@ -215,13 +228,13 @@ router.route("/:transactionID")
                             //Write updated balance to file
                             await fs.writeFile(balanceFilePath, JSON.stringify(balance)).then(()=>{
                                 console.log("====Complete the update request====")
-                                res.status(200).send(target)
+                                return res.status(200).send(target)
                             }).catch(err=>{throw err})
 
                         }
                         else{
                             console.log("====Complete the update request====")
-                            res.status(200).send(target)
+                            return res.status(200).send(target)
                         }
                     }
                     
