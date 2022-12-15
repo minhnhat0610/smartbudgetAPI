@@ -211,12 +211,17 @@ router.route("/:transactionID")
                     else{
                         target["changes"] = changes
                         if(changes["transaction-amount"]){
+                            console.log("====Start writing NEW BALANCE to files====")
                             //Write updated balance to file
                             await fs.writeFile(balanceFilePath, JSON.stringify(balance)).then(()=>{
                                 console.log("====Complete the update request====")
                                 res.status(200).send(target)
                             }).catch(err=>{throw err})
 
+                        }
+                        else{
+                            console.log("====Complete the update request====")
+                            res.status(200).send(target)
                         }
                     }
                     
