@@ -115,7 +115,6 @@ router.route("/")
     if(Object.keys(req.body).length>=2){
         try{
             const data = req.body
-            console.log(data)
             const index =  FindTransactionbyDate(transactionArr, data)
             CreateNewTransactionID(index, data)
             AddTransaction(index, data)
