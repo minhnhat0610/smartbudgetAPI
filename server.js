@@ -14,6 +14,6 @@ app.use(express.urlencoded({extended: false}))
 app.use("/api/balance",balanceRouter)
 app.use("/api/transactions", transactionRouter)
 
-// app.listen(5000, ()=>{
-//     console.log("Server is started on 5000")
-// })
+app.listen(5000, ()=>{
+    console.log("Server is started on 5000")
+})
