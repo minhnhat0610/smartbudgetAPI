@@ -114,10 +114,12 @@ router.route("/")
 .post(async (req,res)=>{
     if(Object.keys(req.body).length>=2){
         try{
+            console.log("====Start a new transaction created request====")
             const data = req.body
             const index =  FindTransactionbyDate(transactionArr, data)
             CreateNewTransactionID(index, data)
             AddTransaction(index, data)
+            console.log("====Start writing new transactions to the file====")
             const writeFile = await WriteToTransactionFile()
             if(writeFile){
                 throw writeFile
@@ -140,33 +142,40 @@ router.route("/:transactionID")
 .post(async (req,res)=>{
     const transactionID = req.params["transactionID"]
     if(Object.keys(req.body).length>0 && transactionID){
+        console.log("====Start a new transaction updated request====")
         const changes = req.body
         const target = {"transactionID": transactionID}
         try{
             const splitterIndex = transactionID.indexOf("_")
             const originalDate = transactionID.substring(0,splitterIndex)
             target["transaction-date"] = originalDate
-
+            console.log("====Locating transaction...====")
             const dateIndex = FindTransactionbyDate(transactionArr, target)
             if(dateIndex >=0){
                 const transactionIndex = FindTransactionbyID(transactionArr,target,dateIndex)
+                console.log("====Found transactions====")
                 try{
                     if(transactionIndex >= 0){
                     const originalTransaction = transactionArr[dateIndex].data[transactionIndex]
                     const originalAmount = originalTransaction["transaction-amount"]
+
+                    console.log("====Start update transaction changes====")
                     const updatedTransaction = UpdateTransactionDetails(dateIndex, transactionIndex, changes)
                     
                         // Update the total balance if transaction amount is updated
                         if(changes["transaction-amount"]){
+                            console.log("====Start update transaction AMOUNT====")
                             const newAmount = changes["transaction-amount"]
                             const originalBalance = balance["total-balance"]
                             const newBalance = originalBalance + originalAmount - newAmount
                             balance["total-balance"] = newBalance
-
+                            console.log("====Complete update transaction AMOUNT====")
                         }
 
                         //Update new position in transaction array if transaction date has change
                         if(changes["transaction-date"]){
+                            console.log("====Start update transaction DATE====")
+
                             const newTransaction = {
                                 "data": [updatedTransaction],
                                 "transaction-date": changes["transaction-date"]
@@ -176,6 +185,8 @@ router.route("/:transactionID")
                             CreateNewTransactionID(newPosition,newTransaction)
                             AddTransaction(newPosition,newTransaction)
                             RemoveTransaction(dateIndex, transactionIndex)
+                            console.log("====Complete update transaction DATE====")
+
                         }
                     }
                     else
@@ -191,6 +202,7 @@ router.route("/:transactionID")
                 }
                 finally{
                     // Write transactions to file
+                    console.log("====Start writing update to the files====")
                     const writeFile = await WriteToTransactionFile()
                     if(writeFile){
                         console.log(writeFile)
@@ -201,7 +213,8 @@ router.route("/:transactionID")
                         if(changes["transaction-amount"]){
                             //Write updated balance to file
                             await fs.writeFile(balanceFilePath, JSON.stringify(balance)).then(()=>{
-                                res.status(200).json(target)
+                                console.log("====Complete the update request====")
+                                res.status(200).send(target)
                             }).catch(err=>{throw err})
 
                         }
