@@ -100,6 +100,20 @@ const WriteToTransactionFile = ()=>{
     return fs.writeFile(transactionPath,JSON.stringify(transactionArr))
 }
 
+const GetCurrentBalance = async () =>{
+    try {
+        const totalBalance = await fs.readFile(balanceFilePath, {
+          encoding: "utf8",
+        });
+        console.log(totalBalance)
+        return JSON.parse(totalBalance)
+      } catch (err) {
+        console.log("=====Error occured during getting current balance======")
+        console.log(err)
+        return err
+      }
+}
+
 
 router.route("/")
 .get(async (req,res) => {
@@ -260,6 +274,7 @@ router.route("/:transactionID")
     }
 })
 .delete(async (req,res)=>{
+    console.log("=====Start Delete Request=======")
     const transactionID = req.params["transactionID"]
     const splitterIndex = transactionID.indexOf("_")
     const transactionDate = transactionID.substring(0,splitterIndex)
@@ -267,24 +282,43 @@ router.route("/:transactionID")
         "transaction-date": transactionDate,
         "transactionID": transactionID
     }
+    console.log("=====Finding transaction...=======")
     const dateIndex = FindTransactionbyDate(transactionArr, searchTarget)
     if(dateIndex>=0){
+        console.log("=====Found transaction DATE...=======")
         const transactionIndex = FindTransactionbyID(transactionArr,searchTarget,dateIndex)
         if(transactionIndex >= 0){
+            console.log("=====Found transaction INDEX...=======")
             try{
-                const transactionAmount = transactionArr[dateIndex].data[transactionIndex]["transaction-amount"]
+                
+                const deletedTransaction = transactionArr[dateIndex].data[transactionIndex]
+                console.log(`Delete target:`)
+                console.log(deletedTransaction)
+                console.log("=====Get current balance...=======")
+                const balance = await GetCurrentBalance()
+                console.log(`Current balance: ${balance["total-balance"]}`)
+                console.log("=====Update new balance...=======")
+                const transactionAmount = deletedTransaction["transaction-amount"]
+                console.log(`Balance after update: ${balance["total-balance"]} + ${transactionAmount}`)
                 balance["total-balance"] += transactionAmount
+                console.log(`Updated balance: ${balance["total-balance"]}`)
+
+                console.log("=====Remove the original transaction...=======")
                 RemoveTransaction(dateIndex,transactionIndex)
+
+                console.log("=====Re-write transaction to files...=======")
                  // Write transactions to file
                 const writeFile = await WriteToTransactionFile(searchTarget)
                 if(writeFile){
                     throw writeFile
                 }
                 else{
+                    console.log("=====Re-write new balance to files...=======")
                     await fs.writeFile(balanceFilePath, JSON.stringify(balance)).then(()=>{
+                        console.log("=====Complete delete request...=======")
                         res.status(200).json(searchTarget)
                     }).catch(err=>{throw err})
-        }
+                }
             }
             catch(err){
                 console.log(err)
