@@ -3,6 +3,506 @@
         "data": [
             {
                 "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "convenient store",
+                "transaction-amount": 3.83,
+                "transactionID": "1/4/2023_0"
+            }
+        ],
+        "transaction-date": "1/4/2023"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "mì gói đêm",
+                "transaction-amount": 5.1,
+                "transactionID": "1/3/2023_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "phở airport",
+                "transaction-amount": 13.52,
+                "transactionID": "1/3/2023_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "popeyes chicken",
+                "transaction-amount": 6.51,
+                "transactionID": "1/3/2023_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "cà phê bò sông",
+                "transaction-amount": 3.06,
+                "transactionID": "1/3/2023_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "tinh dầu vape",
+                "transaction-amount": 14.88,
+                "transactionID": "1/3/2023_0"
+            }
+        ],
+        "transaction-date": "1/3/2023"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "nhậu đêm",
+                "transaction-amount": 21.26,
+                "transactionID": "1/1/2023_6"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "thuoc",
+                "transaction-amount": 0.64,
+                "transactionID": "1/1/2023_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "med",
+                "transaction-amount": 1.96,
+                "transactionID": "1/1/2023_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "ăn trưa ",
+                "transaction-amount": 42.52,
+                "transactionID": "1/1/2023_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "cà phê",
+                "transaction-amount": 2.13,
+                "transactionID": "1/1/2023_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "ăn sáng",
+                "transaction-amount": 2.98,
+                "transactionID": "1/1/2023_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "bỏ tiền nhà thờ",
+                "transaction-amount": 2.13,
+                "transactionID": "1/1/2023_0"
+            }
+        ],
+        "transaction-date": "1/1/2023"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Entertainment",
+                "transaction-name": "year end party",
+                "transaction-amount": 106.3,
+                "transactionID": "12/31/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "thuốc",
+                "transaction-amount": 0.85,
+                "transactionID": "12/31/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "h2 cà phê",
+                "transaction-amount": 0.94,
+                "transactionID": "12/31/2022_0"
+            }
+        ],
+        "transaction-date": "12/31/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "drink at airport",
+                "transaction-amount": 6.08,
+                "transactionID": "12/30/2022_6"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "típ ks",
+                "transaction-amount": 0.85,
+                "transactionID": "12/30/2022_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "hớt tóc",
+                "transaction-amount": 127.56,
+                "transactionID": "12/30/2022_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "nước sâm",
+                "transaction-amount": 0.85,
+                "transactionID": "12/30/2022_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "cơm tấm cây khế",
+                "transaction-amount": 6.55,
+                "transactionID": "12/30/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "starbuck water",
+                "transaction-amount": 1.28,
+                "transactionID": "12/30/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "starbuck",
+                "transaction-amount": 5.36,
+                "transactionID": "12/30/2022_0"
+            }
+        ],
+        "transaction-date": "12/30/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "parking at the buffet ",
+                "transaction-amount": 1.7,
+                "transactionID": "12/29/2022_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "grab to dentist",
+                "transaction-amount": 10.63,
+                "transactionID": "12/29/2022_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "parking airport",
+                "transaction-amount": 2.59,
+                "transactionID": "12/29/2022_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "nước ép chanh dây airport",
+                "transaction-amount": 3.78,
+                "transactionID": "12/29/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "airport drink",
+                "transaction-amount": 3.83,
+                "transactionID": "12/29/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "khách sạn",
+                "transaction-amount": 19.56,
+                "transactionID": "12/29/2022_0"
+            }
+        ],
+        "transaction-date": "12/29/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "lang farm",
+                "transaction-amount": 11.95,
+                "transactionID": "12/28/2022_8"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "taxi to chổ đón",
+                "transaction-amount": 2.13,
+                "transactionID": "12/28/2022_7"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "bòn huế",
+                "transaction-amount": 4.68,
+                "transactionID": "12/28/2022_6"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-amount": 5.95,
+                "transaction-name": "bánh căn",
+                "transactionID": "12/28/2022_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "grab to bánh căn",
+                "transaction-amount": 2.13,
+                "transactionID": "12/28/2022_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "mojito drink",
+                "transaction-amount": 6.17,
+                "transactionID": "12/28/2022_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "nước rừng hoa",
+                "transaction-amount": 9.35,
+                "transactionID": "12/28/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "thuê xe máy",
+                "transaction-amount": 14.46,
+                "transactionID": "12/28/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "rau má",
+                "transaction-amount": 1.7,
+                "transactionID": "12/28/2022_0"
+            }
+        ],
+        "transaction-date": "12/28/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "bánh",
+                "transaction-amount": 0.77,
+                "transactionID": "12/27/2022_12"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "taxi to chợ đà lạt",
+                "transaction-amount": 2.13,
+                "transactionID": "12/27/2022_11"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "an sơn quán",
+                "transaction-amount": 30.57,
+                "transactionID": "12/27/2022_10"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "taxi to dinner",
+                "transaction-amount": 9.35,
+                "transactionID": "12/27/2022_9"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "mướn xe",
+                "transaction-amount": 4.68,
+                "transactionID": "12/27/2022_8"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "me thái",
+                "transaction-amount": 4.25,
+                "transactionID": "12/27/2022_7"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "bánh tráng nuong",
+                "transaction-amount": 2.98,
+                "transactionID": "12/27/2022_6"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "chuối chiên",
+                "transaction-amount": 0.68,
+                "transactionID": "12/27/2022_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "đỗ xăng vision",
+                "transaction-amount": 3.4,
+                "transactionID": "12/27/2022_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "mongo land",
+                "transaction-amount": 10.2,
+                "transactionID": "12/27/2022_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "típ khách sạn",
+                "transaction-amount": 2.13,
+                "transactionID": "12/27/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "snack on airplane",
+                "transaction-amount": 1.91,
+                "transactionID": "12/27/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "ăn sáng airport",
+                "transaction-amount": 12.88,
+                "transactionID": "12/27/2022_0"
+            }
+        ],
+        "transaction-date": "12/27/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "Grab đi đồ cháu",
+                "transaction-amount": 21.26,
+                "transactionID": "12/26/2022_12"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "Đổ xăng xe dream",
+                "transaction-amount": 2.13,
+                "transactionID": "12/26/2022_11"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "Tip cho ông giữ xe",
+                "transaction-amount": 0.85,
+                "transactionID": "12/26/2022_10"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "cơm quê mười khó suck ass",
+                "transaction-amount": 21.73,
+                "transactionID": "12/26/2022_9"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "bánh bèo bà diễm",
+                "transaction-amount": 3.4,
+                "transactionID": "12/26/2022_8"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "bánh mì pate chả",
+                "transaction-amount": 0.85,
+                "transactionID": "12/26/2022_7"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Gas/Automotive",
+                "transaction-name": "rửa xe",
+                "transaction-amount": 1.28,
+                "transactionID": "12/26/2022_6"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Entertainment",
+                "transaction-name": "vé số",
+                "transaction-amount": 0.85,
+                "transactionID": "12/26/2022_5"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "trái cây",
+                "transaction-amount": 0.55,
+                "transactionID": "12/26/2022_4"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "hotel tip",
+                "transaction-amount": 0.85,
+                "transactionID": "12/26/2022_3"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Merchandise",
+                "transaction-name": "Farmer fruit",
+                "transaction-amount": 15.94,
+                "transactionID": "12/26/2022_2"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "cháo lòng",
+                "transaction-amount": 7.44,
+                "transactionID": "12/26/2022_1"
+            },
+            {
+                "transaction-note": "",
+                "categories-selections": "Other-Services",
+                "transaction-name": "Dental checkup",
+                "transaction-amount": 25.51,
+                "transactionID": "12/26/2022_0"
+            }
+        ],
+        "transaction-date": "12/26/2022"
+    },
+    {
+        "data": [
+            {
+                "transaction-note": "",
+                "categories-selections": "Dinning",
+                "transaction-name": "do an vat",
+                "transaction-amount": 9.03,
+                "transactionID": "12/25/2022_10"
+            },
+            {
+                "transaction-note": "",
                 "categories-selections": "Dinning",
                 "transaction-name": "Chicha San Chen",
                 "transaction-amount": 7.06,
@@ -39,7 +539,7 @@
             {
                 "transaction-note": "",
                 "categories-selections": "Dinning",
-                "transaction-name": "Grab Car",
+                "transaction-name": "Grab Car to airport",
                 "transaction-amount": 6.38,
                 "transactionID": "12/25/2022_4"
             },
